@@ -1,0 +1,4 @@
+install
+requirements
+**/__pycache__
+.coverage
