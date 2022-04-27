@@ -14,6 +14,7 @@ on:
   pull_request:
     branches: 
         - develop
+        - 'feature/*'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -29,9 +30,6 @@ jobs:
       with:
         python-version: 3.8
     
-    - name: Installing Serverless framework and plugins
-      run: make serverless
-
     - name: Installing requirements
       run: make requirements
 
