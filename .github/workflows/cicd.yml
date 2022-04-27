@@ -29,9 +29,6 @@ jobs:
       with:
         python-version: 3.8
     
-    - name: Installing Serverless framework and plugins
-      run: make serverless
-
     - name: Installing requirements
       run: make requirements
 
