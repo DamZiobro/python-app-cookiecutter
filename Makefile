@@ -3,7 +3,7 @@ TEST_DIRS=tests
 POETRY_COMMAND=cli-command
 
 requirements:
-	pip install poetry
+	pip3 install poetry
 	poetry install
 	touch $@
 
@@ -29,4 +29,4 @@ run: requirements
 	poetry run $(POETRY_COMMAND) $(OPTIONS)
 
 install: requirements
-	pip install .
+	pip3 install .
