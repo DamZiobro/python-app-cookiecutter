@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "cli-command"
-version = "0.1.0"
+version = "0.1.1"
 description = "Sample CLI Command"
 authors = ["Damian Ziobro <damian@xmementoit.com>"]
 

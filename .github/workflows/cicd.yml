@@ -10,7 +10,7 @@ on:
         - develop
         - 'release/*'
     tags: 
-        - prd-v*
+        - v*
   pull_request:
     branches: 
         - develop
