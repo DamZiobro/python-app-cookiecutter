@@ -25,6 +25,8 @@ cov: requirements
 cov-html: requirements
 	poetry run coverage html
 
+checks: lint cov
+
 run: requirements
 	poetry run $(POETRY_COMMAND) $(OPTIONS)
 
