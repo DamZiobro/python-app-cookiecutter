@@ -3,7 +3,7 @@ TEST_DIRS=tests
 POETRY_COMMAND=cli-command
 
 requirements:
-	pip3 install poetry
+	pip3 install poetry setuptools wheel
 	poetry install
 	touch $@
 
