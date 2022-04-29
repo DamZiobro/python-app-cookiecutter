@@ -4,7 +4,10 @@ from unittest.mock import patch
 
 import fire
 
-from cli_command.command import cli, main
+from cli_command.command import (
+    cli,
+    main,
+)
 
 
 @patch("fire.Fire")
