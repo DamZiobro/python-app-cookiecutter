@@ -6,7 +6,7 @@ import fire
 
 
 def command():
-    """Implementation of the actual command."""
+    """Add of the actual cli command."""
     return "hello world"
 
 
