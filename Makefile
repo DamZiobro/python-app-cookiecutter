@@ -16,9 +16,12 @@ lint: requirements
 	poetry run isort --check-only $(CODE_DIRS) $(TEST_DIRS)
 	poetry run black --check $(CODE_DIRS) $(TEST_DIRS)
 
+type-check:
+	poetry run mypy ${CODE_DIRS} ${TEST_DIRS}
+
 unit-tests: requirements
 	poetry run pytest -s -vv $(TEST_FILE)
-	
+
 cov: requirements
 	poetry run pytest -s -vv --cov=$(CODE_DIRS) $(TEST_FILE)
 
