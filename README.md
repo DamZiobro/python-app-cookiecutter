@@ -2,12 +2,12 @@ Skeleton of Python CLI app
 ==
 
 Skeleton of Python CLI app project including:
-* poetry-based dependency and virtual machines management
-* unit tests with code coverage
-* linting 
-* CI including linting and unit tests checks (integrated with GitHub Actions
+* **poetry-based dependency and virtual machines management**
+* unit tests with **code coverage report**
+* **linting** (blake, isort, flake8, mypy) 
+* **CI/CD** including linting and unit tests checks (integrated with GitHub Actions
   according to Git Flow rules)
-* Makefile with most useful preconfigured development and CI/CD commands
+* **Makefile** with most useful preconfigured development and CI/CD commands
 
 
 Run locally
