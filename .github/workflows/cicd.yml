@@ -36,6 +36,9 @@ jobs:
     - name: Linting
       run: make lint
 
+    - name: Type checking
+      run: make type-check
+
     - name: Code coverage
       run: make cov
 
