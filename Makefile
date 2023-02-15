@@ -2,33 +2,41 @@ CODE_DIRS=cli_command
 TEST_DIRS=tests
 POETRY_COMMAND=cli-command
 
-requirements:
-	pip3 install poetry setuptools wheel
+deps: ## install project dependencies
+	poetry --version || echo "Install poetry using: 'pip install poetry setuptools wheel'"
+	poetry config virtualenvs.in-project true
+	poetry env use python3.8
 	poetry install
 	touch $@
 
-format: requirements
+format: deps ## format code according to PEP-8 style
 	poetry run isort $(CODE_DIRS) $(TEST_DIRS)
 	poetry run black $(CODE_DIRS) $(TEST_DIRS)
 
-lint: requirements
+lint: deps ## check wehther code is formatted according to PEP-8 style
 	poetry run flake8 $(CODE_DIRS) $(TEST_DIRS)
 	poetry run isort --check-only $(CODE_DIRS) $(TEST_DIRS)
 	poetry run black --check $(CODE_DIRS) $(TEST_DIRS)
 
-unit-tests: requirements
+type-check: ## check whether python annotations are properly assigned
+	poetry run mypy ${CODE_DIRS} ${TEST_DIRS}
+
+unit-tests: deps ## run unit tests
 	poetry run pytest -s -vv $(TEST_FILE)
-	
-cov: requirements
+
+cov: deps ## run unit tests and should code coverage
 	poetry run pytest -s -vv --cov=$(CODE_DIRS) $(TEST_FILE)
 
-cov-html: requirements
+cov-html: deps ## run unit tests and generate HTML report showing code coverage
 	poetry run coverage html
 
-checks: lint cov
+checks: lint cov type-check ## run all code checks
 
-run: requirements
+run: deps
 	poetry run $(POETRY_COMMAND) $(OPTIONS)
 
-install: requirements
+install: deps
 	pip3 install .
+
+clean: ## clean project's venv and install everything from scratch
+	rm -rf deps .venv
