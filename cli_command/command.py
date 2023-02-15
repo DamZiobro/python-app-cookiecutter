@@ -16,7 +16,7 @@ def get_version():
 
 
 def cli(version=None):
-    """Build CLI commands."""
+    """Build all CLI commands."""
     if version:
         return get_version()
 

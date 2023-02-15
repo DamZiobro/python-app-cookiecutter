@@ -13,9 +13,10 @@ Skeleton of Python CLI app project including:
 Pre-install dependencies
 ==
 
-1. [poetry](https://python-poetry.org/) - requirements manager and virtualenv management tool
-2. [python 3.8+](https://www.python.org/) - python pre-installed on your machine
-3. [pre-commit](https://pre-commit.com/) - (optional) development dependency for checking code quality before commit
+1. [make](https://www.gnu.org/software/make/) - commands control tool
+2. [poetry](https://python-poetry.org/) - requirements manager and virtualenv management tool
+3. [python 3.8+](https://www.python.org/) - python pre-installed on your machine
+4. [pre-commit](https://pre-commit.com/) - (optional) development dependency for checking code quality before commit
 
 Run locally
 ---
