@@ -1,6 +1,7 @@
 Skeleton of Python CLI app
 ==
 
+
 Skeleton of Python CLI app project including:
 * **poetry-based dependency and virtual machines management**
 * unit tests with **code coverage report**
@@ -9,16 +10,22 @@ Skeleton of Python CLI app project including:
   according to Git Flow rules)
 * **Makefile** with most useful preconfigured development and CI/CD commands
 
+Pre-install dependencies
+==
+
+1. [poetry](https://python-poetry.org/) - requirements manager and virtualenv management tool
+2. [python 3.8+](https://www.python.org/) - python pre-installed on your machine
+3. [pre-commit](https://pre-commit.com/) - (optional) development dependency for checking code quality before commit
 
 Run locally
 ---
 
-```
-make run
-```
+One command `make run` for:
+* creating virtualenv using `poetry` (one off action)
+* install all the python [requirements](./pyproject.toml) inside the virtualenv (one off action)
+* install CLI app locally inside virtualenv and run it
 
-
-Install globally and run
+Install CLI app globally and run
 ---
 
 ```
@@ -27,9 +34,6 @@ cli-command --version
 cli-command
 ```
 
-Checks
+All dev and run commands
 ---
-```
-make lint
-make cov
-```
+* **make deps** install project dependencies

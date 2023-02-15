@@ -3,9 +3,9 @@ TEST_DIRS=tests
 POETRY_COMMAND=cli-command
 
 deps: ## install project dependencies
-	poetry --version || echo "Install poetry using: 'pip install poetry setuptools wheel'"
+	pre-commit install || echo "Optionally install pre-commit tool using 'pip install pre-commit'"
+	poetry --version || (echo "Install poetry using: 'pip install poetry setuptools wheel'" && false)
 	poetry config virtualenvs.in-project true
-	poetry env use python3.8
 	poetry install
 	touch $@
 
