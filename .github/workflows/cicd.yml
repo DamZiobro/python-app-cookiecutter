@@ -30,8 +30,8 @@ jobs:
       with:
         python-version: 3.8
     
-    - name: Installing requirements
-      run: make requirements
+    - name: Installing dependencies
+      run: make deps
 
     - name: Linting
       run: make lint
