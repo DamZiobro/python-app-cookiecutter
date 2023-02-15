@@ -32,11 +32,11 @@ cov-html: deps ## run unit tests and generate HTML report showing code coverage
 
 checks: lint cov type-check ## run all code checks
 
-run: deps
+run: deps ## run the CLI app from locally installed virtualenv
 	poetry run $(POETRY_COMMAND) $(OPTIONS)
 
-install: deps
+install: deps ## install the CLI app into the system global path
 	pip3 install .
 
-clean: ## clean project's venv and install everything from scratch
+clean: ## clean project's virtualenv and dependencies
 	rm -rf deps .venv

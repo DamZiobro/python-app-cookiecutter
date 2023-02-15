@@ -37,4 +37,14 @@ cli-command
 
 All dev and run commands
 ---
-* **make deps** install project dependencies
+* **make deps** - install project dependencies
+* **make format** - format code according to PEP-8 style
+* **make lint** - check wehther code is formatted according to PEP-8 style
+* **make type-check** - check whether python annotations are properly assigned 
+* **make unit-tests** - run unit tests
+* **make cov** - run unit tests and should code coverage
+* **make cov-html** - run unit tests and generate HTML report showing code coverage
+* **make checks** - run all code checks
+* **make run** - run the CLI app from locally installed virtualenv
+* **make install** - install the CLI app into the system global path
+* **make clean** - clean full project's virtualenv and dependencies
