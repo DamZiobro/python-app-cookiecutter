@@ -31,7 +31,7 @@ jobs:
         python-version: 3.8
     
     - name: Installing dependencies
-      run: make deps
+      run: pip install poetry && make deps
 
     - name: Linting
       run: make lint
