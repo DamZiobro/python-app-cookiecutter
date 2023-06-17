@@ -41,5 +41,22 @@ run: deps  ## run cli-command
 install: deps  ## install cli-command globally in your system
 	pip3 install .
 
+build: deps ## build python distribution and wheels
+	poetry build
+
+publish: deps build ## publish lib to the (PYPI_USERNAME and PYPI_PASSWORD env vars MUST be exported before publishing)
+	@poetry publish --repository pypirepo --username $(PYPI_USERNAME) --password $(PYPI_PASSWORD)
+
+docs: deps ## generate mkdocs-based documentation and save to site/index.html
+	poetry run mkdocs build
+	echo "Open the docs using ex. 'firefox site/index.html'"
+
+docs-run: deps ## run mkdocs-based doc in the local server
+	poetry run mkdocs serve
+
 clean: ## clean virtualenv deps etc.
 	rm -rf .venv .pytest_cache .mypy_cache .coverage deps
+	find . -type f -name "*.pyc" | xargs rm -fr
+	find . -type d -name __pycache__ | xargs rm -fr
+
+.PHONY: docs
