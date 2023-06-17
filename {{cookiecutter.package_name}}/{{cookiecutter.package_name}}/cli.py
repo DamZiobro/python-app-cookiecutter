@@ -11,7 +11,7 @@ def cli():
 @cli.command()
 def hello_world():
     """Hello world."""
-    click.echo("hello_world")
+    click.echo("hello world")
 
 
 @cli.command()
