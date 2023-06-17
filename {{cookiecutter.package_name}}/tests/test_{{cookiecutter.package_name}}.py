@@ -4,7 +4,7 @@ import pytest
 
 from click.testing import CliRunner
 
-from {{cookiecutter.package_name}}.commands import (
+from {{cookiecutter.package_name}}.cli import (
     version,
     hello_world,
 )
