@@ -3,6 +3,7 @@
 from unittest.mock import patch
 
 import fire
+
 from {{cookiecutter.package_name}}.command import (
     cli,
     main,

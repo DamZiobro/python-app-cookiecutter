@@ -58,7 +58,7 @@ docs-run: deps ## run mkdocs-based doc in the local server
 	poetry run mkdocs serve
 
 clean: ## clean virtualenv deps etc.
-	rm -rf .venv .pytest_cache .mypy_cache .coverage deps site
+	rm -rf .venv .pytest_cache .mypy_cache .coverage deps site htmlcov
 	find . -type f -name "*.pyc" | xargs rm -fr
 	find . -type d -name __pycache__ | xargs rm -fr
 

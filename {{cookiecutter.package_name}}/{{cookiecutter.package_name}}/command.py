@@ -12,7 +12,7 @@ def command():
 
 def get_version():
     """Return version of this tool."""
-    return importlib.metadata.version("{{cookiecutter.command_name}}")
+    return importlib.metadata.version("{{cookiecutter.package_name}}")
 
 
 def cli(version=None):
