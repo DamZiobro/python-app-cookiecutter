@@ -1,31 +1,29 @@
-"""Unit tests of bcl-uploads-fetcher."""
+"""Unit tests of {{cookiecutter.command_name}}."""
 
-from unittest.mock import patch
+import pytest
 
-import fire
+from click.testing import CliRunner
 
-from {{cookiecutter.package_name}}.command import (
-    cli,
-    main,
+from {{cookiecutter.package_name}}.commands import (
+    version,
+    hello_world,
 )
 
 
-@patch("fire.Fire")
-def test_main_triggers_fire(mock_fire):
-    """Verify fire is triggered from main."""
-    main()
-    mock_fire.assert_called()
+@pytest.fixture
+def cli_runner():
+    return CliRunner()
 
-
-def test_version(capsys):
+def test_version(cli_runner):
     """Verify version."""
-    fire.Fire(cli, ["--version"])
-    cli_output = capsys.readouterr().out
-    assert "0.0.1" in cli_output
+    result = cli_runner.invoke(version)
+    assert result.exit_code == 0
+    assert result.output.strip() == "0.0.1"
 
 
-def test_{{cookiecutter.package_name}}_returns_hello_world(capsys):
+def test_{{cookiecutter.command_name}}_returns_hello_world(cli_runner):
     """Verify output of fetch function."""
-    fire.Fire(cli, [])
-    cli_output = capsys.readouterr().out
-    assert "hello world" in cli_output
+    result = cli_runner.invoke(hello_world)
+    assert result.exit_code == 0
+    assert result.output.strip() == "hello world"
+
