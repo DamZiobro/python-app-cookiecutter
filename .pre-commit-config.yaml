@@ -10,6 +10,13 @@ repos:
       - id: no-commit-to-branch
         args:
           - --pattern=develop|main|master
+      - id: requirements-txt-fixer
+      - id: trailing-whitespace
+      - id: name-tests-test
+      - id: check-toml
+      - id: check-yaml
+      - id: check-symlinks
+      - id: check-merge-conflict
   - repo: local
     hooks:
         - id: make-lint
