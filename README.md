@@ -22,8 +22,26 @@ It includes:
 2. [poetry](https://python-poetry.org/) - requirements manager and virtualenv management tool
 3. [python 3.8+](https://www.python.org/) - python pre-installed on your machine
 4. [pre-commit](https://pre-commit.com/) - (optional) development dependency for checking code quality before commit
-## Getting started
 
+## Getting started
+=======
+
+Skeleton of Python CLI app project including:
+* **poetry-based dependency and virtual machines management**
+* unit tests with **code coverage report**
+* **linting** (blake, isort, flake8, mypy) 
+* **CI/CD** including linting and unit tests checks (integrated with GitHub Actions
+  according to Git Flow rules)
+* **Makefile** with most useful preconfigured development and CI/CD commands
+>>>>>>> develop
+
+Pre-install dependencies
+==
+
+1. [make](https://www.gnu.org/software/make/) - commands control tool
+2. [poetry](https://python-poetry.org/) - requirements manager and virtualenv management tool
+3. [python 3.8+](https://www.python.org/) - python pre-installed on your machine
+4. [pre-commit](https://pre-commit.com/) - (optional) development dependency for checking code quality before commit
 
 ### Install pre-commit hooks
 
@@ -39,9 +57,10 @@ make deps
 
 ### Run app locally
 
-```
-make run
-```
+One command `make run` for:
+* creating virtualenv using `poetry` (one off action)
+* install all the python [requirements](./pyproject.toml) inside the virtualenv (one off action)
+* install CLI app locally inside virtualenv and run it
 
 
 ### Install app globally in the system and run
@@ -77,9 +96,6 @@ make clean
 * **make docs-run** - run mkdocs-based doc in the local server
 * **make format** - format code according to [PEP-8](https://peps.python.org/pep-0008/) style
 * **make lint** - check wehther code is formatted according to [PEP-8](https://peps.python.org/pep-0008/) style
-* **make unit-tests** - run unit tests
-* **make cov** - run unit tests and should code coverage
-* **make cov-html** - run unit tests and generate HTML report showing code coverage
-* **make checks** - run all code checks
+* **make run** - run the CLI app from locally installed virtualenv
 * **make install** - install the CLI app into the system global path
 * **make clean** - clean full project's virtualenv and dependencies
