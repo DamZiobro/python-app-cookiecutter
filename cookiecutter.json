@@ -2,7 +2,7 @@
   "author": "Damian Ziobro",
   "email": "damian@xmementoit.com",
   "github_user": "DamZiobro",
-  "app_name": "Python App Cookiecutter",
+  "app_name": "CLI command",
   "package_name": "{{ cookiecutter.app_name.lower().replace('-', '_').replace(' ', '_') }}",
   "command_name": "cli-command",
   "short_description": "A simple Python CLI application",

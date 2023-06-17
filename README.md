@@ -1,9 +1,7 @@
-{{cookiecutter.app_name}}
-==
+Python App Cookiecutter
+===
 
 **Template of Python app based on [cookiecutter](https://cookiecutter.readthedocs.io/en/stable/README.html) by [Damian Ziobro](https://github.com/DamZiobro)**
-
-{{cookiecutter.short_description}}
 
 It includes:
 
@@ -16,77 +14,10 @@ It includes:
 * **[pre-commit](https://pre-commit.com/)**-based code **checks during git commit**
 * **[poetry](https://python-poetry.org/)-based** - **publishing to [PyPi](https://pypi.org/)**
 
-## Pre-install dependencies
 
-1. [make](https://www.gnu.org/software/make/) - commands control tool
-2. [poetry](https://python-poetry.org/) - requirements manager and virtualenv management tool
-3. [python 3.8+](https://www.python.org/) - python pre-installed on your machine
-4. [pre-commit](https://pre-commit.com/) - (optional) development dependency for checking code quality before commit
+### Getting started
 
-## Getting started
-
-Skeleton of Python CLI app project including:
-* **poetry-based dependency and virtual machines management**
-* unit tests with **code coverage report**
-* **linting** (blake, isort, flake8, mypy) 
-* **CI/CD** including linting and unit tests checks (integrated with GitHub Actions
-  according to Git Flow rules)
-* **Makefile** with most useful preconfigured development and CI/CD commands
-
-
-### Install pre-commit hooks
-
+Create Python project based on this template using [cookiecutter](https://cookiecutter.readthedocs.io/en/stable/README.html):
 ```
-make pre-commit
+cookiecutter https://github.com/DamZiobro/python-app-cookiecutter
 ```
-
-### Create virtualenv and install dependencies
-
-```
-make deps
-```
-
-### Run app locally
-
-One command `make run` for:
-* creating virtualenv using `poetry` (one off action)
-* install all the python [requirements](./pyproject.toml) inside the virtualenv (one off action)
-* install CLI app locally inside virtualenv and run it
-
-
-### Install app globally in the system and run
-
-```
-make install
-{{ cookiecutter.command_name}} --version
-{{ cookiecutter.command_name}}
-```
-
-### Code checks (static code analysis)
-
-```
-make lint
-make cov
-```
-
-### Restart project from scratch
-
-```
-make clean
-```
-
-## All dev and run commands
-
-* **make pre-commit** - install pre-commit hooks (see [.pre-commit-config.yaml](./.pre-commit-config.yaml))
-* **make deps** - install project dependencies
-* **make build** - build python distribution and wheels
-* **make publish** - publish lib to the PyPI (pip repo)
-    * `PYPI_USERNAME` and `PYPI_PASSWORD` env vars MUST be exported before publishing
-    * if you would like to set **private PyPI (pip repo)** please set your repo URL to the `pypirepo` using: `poetry config repositories.pypirepo https://test.pypi.org/legacy/`
-* **make docs** - generate mkdocs-based documentation and save to site/index.html
-* **make docs-run** - run mkdocs-based doc in the local server
-* **make format** - format code according to [PEP-8](https://peps.python.org/pep-0008/) style
-* **make lint** - check wehther code is formatted according to [PEP-8](https://peps.python.org/pep-0008/) style
-* **make run** - run the CLI app from locally installed virtualenv
-* **make install** - install the CLI app into the system global path
-* **make clean** - clean full project's virtualenv and dependencies
