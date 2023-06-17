@@ -11,6 +11,12 @@ repos:
         args:
           - --pattern=develop|main
       - id: requirements-txt-fixer
+      - id: trailing-whitespace
+      - id: name-tests-test
+      - id: check-toml
+      - id: check-yaml
+      - id: check-symlinks
+      - id: check-merge-conflict
   - repo: https://github.com/pre-commit/mirrors-isort
     rev: v5.5.2
     hooks:
