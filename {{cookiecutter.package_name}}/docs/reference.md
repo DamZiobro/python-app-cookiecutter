@@ -7,5 +7,5 @@ reference for the technical implementation of the
 `{{cookiecutter.app_name}}`.
 
 
-::: {{cookiecutter.packge_name}}.command
+::: {{cookiecutter.package_name}}.command
     handler: python

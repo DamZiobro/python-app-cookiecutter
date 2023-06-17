@@ -26,7 +26,7 @@ It includes:
 Skeleton of Python CLI app project including:
 * **poetry-based dependency and virtual machines management**
 * unit tests with **code coverage report**
-* **linting** (blake, isort, flake8, mypy) 
+* **linting** (blake, isort, flake8, mypy)
 * **CI/CD** including linting and unit tests checks (integrated with GitHub Actions
   according to Git Flow rules)
 * **Makefile** with most useful preconfigured development and CI/CD commands
@@ -75,6 +75,7 @@ make clean
 
 ## All dev and run commands
 
+* **make help** - print descriptions of all make commands
 * **make pre-commit** - install pre-commit hooks (see [.pre-commit-config.yaml](./.pre-commit-config.yaml))
 * **make deps** - install project dependencies
 * **make build** - build python distribution and wheels

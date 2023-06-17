@@ -20,7 +20,7 @@ def test_version(capsys):
     """Verify version."""
     fire.Fire(cli, ["--version"])
     cli_output = capsys.readouterr().out
-    assert "0.1.1" in cli_output
+    assert "0.0.1" in cli_output
 
 
 def test_{{cookiecutter.package_name}}_returns_hello_world(capsys):

@@ -1,5 +1,6 @@
 ## All dev and run commands
 
+* **make help** - print descriptions of all make commands
 * **make pre-commit** - install pre-commit hooks (see [.pre-commit-config.yaml](../.pre-commit-config.yaml))
 * **make deps** - install project dependencies
 * **make build** - build python distribution and wheels

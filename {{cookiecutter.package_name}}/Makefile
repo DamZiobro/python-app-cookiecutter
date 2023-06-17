@@ -2,6 +2,9 @@ CODE_DIRS={{cookiecutter.package_name}}
 TEST_DIRS=tests
 POETRY_COMMAND={{cookiecutter.command_name}}
 
+help:  ## these help instructions
+	@sed -rn 's/^([a-zA-Z_-]+):.*?## (.*)$$/"\1" "\2"/p' < $(MAKEFILE_LIST)|xargs printf "make %-20s# %s\n"
+
 pre-commit: ## install pre-commit hooks defined in .pre-commit-config.yaml
 	pre-commit install
 
