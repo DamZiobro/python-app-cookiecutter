@@ -17,4 +17,4 @@ def hello_world():
 @cli.command()
 def version():
     """Return version of this tool."""
-    click.echo(importlib.metadata.version("{{}}"))
+    click.echo(importlib.metadata.version("{{cookiecutter.package_name}}"))
