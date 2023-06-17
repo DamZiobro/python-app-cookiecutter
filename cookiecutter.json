@@ -1,0 +1,17 @@
+{
+  "author": "Damian Ziobro",
+  "email": "damian@xmementoit.com",
+  "github_user": "DamZiobro",
+  "app_name": "Python App Cookiecutter",
+  "package_name": "cli_command",
+  "command_name": "cli-command",
+  "module_name": "{{ cookiecutter.package_name|lower|replace('-', '_') }}",
+  "short_description": "A simple Python CLI application",
+  "version": "0.0.1",
+  "copyright_year": "{% now 'utc', '%Y' %}",
+  "license": "MIT",
+  "add_badges": [
+    "n",
+    "y"
+  ]
+}

@@ -1,4 +1,4 @@
-site_name: Python App Cookiecutter
+site_name: {{cookiecutter.app_name}}
 
 theme:
     name: "material"
@@ -20,3 +20,4 @@ nav:
     - "Introduction": index.md
     - "Getting started": getting_started.md
     - "All dev commands": dev_commands.md
+    - "Code reference": reference.md

@@ -3,8 +3,7 @@
 from unittest.mock import patch
 
 import fire
-
-from cli_command.command import (
+from {{cookiecutter.package_name}}.command import (
     cli,
     main,
 )
@@ -24,7 +23,7 @@ def test_version(capsys):
     assert "0.1.1" in cli_output
 
 
-def test_cli_command_returns_hello_world(capsys):
+def test_{{cookiecutter.package_name}}_returns_hello_world(capsys):
     """Verify output of fetch function."""
     fire.Fire(cli, [])
     cli_output = capsys.readouterr().out

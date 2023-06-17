@@ -1,6 +1,6 @@
-CODE_DIRS=cli_command
+CODE_DIRS={{cookiecutter.package_name}}
 TEST_DIRS=tests
-POETRY_COMMAND=cli-command
+POETRY_COMMAND={{cookiecutter.command_name}}
 
 pre-commit: ## install pre-commit hooks defined in .pre-commit-config.yaml
 	pre-commit install
@@ -35,10 +35,10 @@ cov-html: deps  ## show test code coverage and generate HTML-based coverage repo
 
 checks: lint cov type-check
 
-run: deps  ## run cli-command
+run: deps  ## run {{cookiecutter.command_name}}
 	poetry run $(POETRY_COMMAND) $(OPTIONS)
 
-install: deps  ## install cli-command globally in your system
+install: deps  ## install {{cookiecutter.command_name}} globally in your system
 	pip3 install .
 
 build: deps ## build python distribution and wheels
@@ -55,7 +55,7 @@ docs-run: deps ## run mkdocs-based doc in the local server
 	poetry run mkdocs serve
 
 clean: ## clean virtualenv deps etc.
-	rm -rf .venv .pytest_cache .mypy_cache .coverage deps
+	rm -rf .venv .pytest_cache .mypy_cache .coverage deps site
 	find . -type f -name "*.pyc" | xargs rm -fr
 	find . -type d -name __pycache__ | xargs rm -fr
 

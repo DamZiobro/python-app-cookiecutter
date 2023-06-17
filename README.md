@@ -1,7 +1,9 @@
-Python app cookiecutter
+{{cookiecutter.app_name}}
 ==
 
 **Template of Python app based on [cookiecutter](https://cookiecutter.readthedocs.io/en/stable/README.html) by [Damian Ziobro](https://github.com/DamZiobro)**
+
+{{cookiecutter.short_description}}
 
 It includes:
 
@@ -46,8 +48,8 @@ make run
 
 ```
 make install
-cli-command --version
-cli-command
+{{ cookiecutter.command_name}} --version
+{{ cookiecutter.command_name}}
 ```
 
 ### Code checks (static code analysis)

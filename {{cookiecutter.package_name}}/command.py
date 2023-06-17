@@ -1,4 +1,4 @@
-"""Implementation of bcl-uploads-fetcher tool."""
+"""Implementation of {{cookiecutter.command_name}} tool."""
 
 import importlib.metadata
 
@@ -6,13 +6,13 @@ import fire
 
 
 def command():
-    """Add of the actual cli command."""
+    """Add of the actual {{cookiecutter.command_name}}."""
     return "hello world"
 
 
 def get_version():
     """Return version of this tool."""
-    return importlib.metadata.version("cli-command")
+    return importlib.metadata.version("{{cookiecutter.command_name}}")
 
 
 def cli(version=None):

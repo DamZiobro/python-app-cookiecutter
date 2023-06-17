@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "cli-command"
-version = "0.1.1"
-description = "Sample CLI Command"
-authors = ["Damian Ziobro <damian@xmementoit.com>"]
+name = "{{cookiecutter.package_name}}"
+version = "{{cookiecutter.version}}"
+description = "{{cookiecutter.short_description}}"
+authors = ["{{cookiecutter.author}} <{{cookiecutter.email}}> (GitHub: {{cookiecutter.github_user}})"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
@@ -26,4 +26,4 @@ requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-cli-command = "cli_command.command:main"
+{{cookiecutter.command_name}} = "{{cookiecutter.package_name}}.command:main"
