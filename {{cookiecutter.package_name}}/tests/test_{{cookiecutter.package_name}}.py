@@ -21,7 +21,7 @@ def test_version(cli_runner):
     assert result.output.strip() == "0.0.1"
 
 
-def test_{{cookiecutter.command_name}}_returns_hello_world(cli_runner):
+def test_{{cookiecutter.package_name}}_returns_hello_world(cli_runner):
     """Verify output of fetch function."""
     result = cli_runner.invoke(hello_world)
     assert result.exit_code == 0
