@@ -1,7 +1,7 @@
 Python app cookiecutter
 ==
 
-Template of Python CLI app project including based on [cookiecutter](https://cookiecutter.readthedocs.io/en/stable/README.html).
+**Template of Python app based on [cookiecutter](https://cookiecutter.readthedocs.io/en/stable/README.html) by [Damian Ziobro](https://github.com/DamZiobro)**
 
 It includes:
 
@@ -14,14 +14,12 @@ It includes:
 * **[pre-commit](https://pre-commit.com/)**-based code **checks during git commit**
 * **[poetry](https://python-poetry.org/)-based** - **publishing to [PyPi](https://pypi.org/)**
 
-
 ## Development dependencies
 
 1. [make](https://www.gnu.org/software/make/) - commands control tool
 2. [poetry](https://python-poetry.org/) - requirements manager and virtualenv management tool
 3. [python 3.8+](https://www.python.org/) - python pre-installed on your machine
 4. [pre-commit](https://pre-commit.com/) - (optional) development dependency for checking code quality before commit
-
 ## Getting started
 
 
