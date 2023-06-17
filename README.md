@@ -16,7 +16,7 @@ It includes:
 * **[pre-commit](https://pre-commit.com/)**-based code **checks during git commit**
 * **[poetry](https://python-poetry.org/)-based** - **publishing to [PyPi](https://pypi.org/)**
 
-## Development dependencies
+## Pre-install dependencies
 
 1. [make](https://www.gnu.org/software/make/) - commands control tool
 2. [poetry](https://python-poetry.org/) - requirements manager and virtualenv management tool
@@ -24,7 +24,6 @@ It includes:
 4. [pre-commit](https://pre-commit.com/) - (optional) development dependency for checking code quality before commit
 
 ## Getting started
-=======
 
 Skeleton of Python CLI app project including:
 * **poetry-based dependency and virtual machines management**
@@ -33,15 +32,7 @@ Skeleton of Python CLI app project including:
 * **CI/CD** including linting and unit tests checks (integrated with GitHub Actions
   according to Git Flow rules)
 * **Makefile** with most useful preconfigured development and CI/CD commands
->>>>>>> develop
 
-Pre-install dependencies
-==
-
-1. [make](https://www.gnu.org/software/make/) - commands control tool
-2. [poetry](https://python-poetry.org/) - requirements manager and virtualenv management tool
-3. [python 3.8+](https://www.python.org/) - python pre-installed on your machine
-4. [pre-commit](https://pre-commit.com/) - (optional) development dependency for checking code quality before commit
 
 ### Install pre-commit hooks
 
