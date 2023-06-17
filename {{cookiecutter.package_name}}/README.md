@@ -47,6 +47,7 @@ make deps
 ### Run app locally
 
 One command `make run` for:
+
 * creating virtualenv using `poetry` (one off action)
 * install all the python [requirements](./pyproject.toml) inside the virtualenv (one off action)
 * install CLI app locally inside virtualenv and run it
