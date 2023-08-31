@@ -13,26 +13,21 @@
 ## Getting started
 
 
-### Install pre-commit hooks
-
-```
-make pre-commit
-```
-
 ### Create virtualenv and install dependencies
 
+Automatically create virtualenv (in .venv dir) and install all dependencies using
+[poetry](https://python-poetry.org/) tool.
 ```
 make deps
 ```
 
 ### Run app locally
 
-One command `make run` for:
+One command **`make run`** for:
 
-* creating virtualenv using `poetry` (one off action)
+* creating virtualenv using `poetry` (idempotent action)
 * install all the python [requirements](./pyproject.toml) inside the virtualenv (one off action)
 * install CLI app locally inside virtualenv and run it
-
 
 ### Install app globally in the system and run
 
@@ -53,6 +48,16 @@ make cov
 
 ```
 make clean
+```
+
+
+### (Optional for devs) Install pre-commit hooks
+
+Create [pre-commit](https://pre-commit.com/)-based hooks which will check the
+code syntax (using [black](https://pypi.org/project/black/), [isort](https://pypi.org/project/isort/) and [flake8](https://pypi.org/project/flake8/)) before each commit.
+
+```
+make pre-commit
 ```
 
 ## Developer Guide
