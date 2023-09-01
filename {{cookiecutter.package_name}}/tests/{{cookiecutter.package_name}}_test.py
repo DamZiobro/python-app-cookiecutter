@@ -10,18 +10,18 @@ from {{cookiecutter.package_name}}.cli import (
 )
 
 
-@pytest.fixture
+@pytest.fixture()
 def cli_runner():
     return CliRunner()
 
-def test_version(cli_runner):
+def test_version(cli_runner: CliRunner):
     """Verify version."""
     result = cli_runner.invoke(version)
     assert result.exit_code == 0
     assert result.output.strip() == "0.0.1"
 
 
-def test_{{cookiecutter.package_name}}_returns_hello_world(cli_runner):
+def test_{{cookiecutter.package_name}}_returns_hello_world(cli_runner: CliRunner):
     """Verify output of fetch function."""
     result = cli_runner.invoke(hello_world)
     assert result.exit_code == 0
