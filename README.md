@@ -21,3 +21,5 @@ Create Python project based on this template using [cookiecutter](https://cookie
 ```
 cookiecutter https://github.com/DamZiobro/python-app-cookiecutter
 ```
+
+![usage](./docs/usage.png)
