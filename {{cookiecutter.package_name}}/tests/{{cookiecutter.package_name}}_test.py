@@ -1,7 +1,6 @@
 """Unit tests of {{cookiecutter.command_name}}."""
 
 import pytest
-
 from click.testing import CliRunner
 
 from {{cookiecutter.package_name}}.cli import (
