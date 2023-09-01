@@ -16,13 +16,10 @@ deps: ## install project dependencies
 	touch $@
 
 format: deps ## format code according to PEP-8 style
-	poetry run isort $(CODE_DIRS) $(TEST_DIRS)
-	poetry run black $(CODE_DIRS) $(TEST_DIRS)
+	poetry run ruff --fix $(CODE_DIRS) $(TEST_DIRS)
 
 lint: deps ## check wehther code is formatted according to PEP-8 style
-	poetry run flake8 $(CODE_DIRS) $(TEST_DIRS)
-	poetry run isort --check-only $(CODE_DIRS) $(TEST_DIRS)
-	poetry run black --check $(CODE_DIRS) $(TEST_DIRS)
+	poetry run ruff check $(CODE_DIRS) $(TEST_DIRS)
 
 type-check: ## check whether python annotations are properly assigned
 	poetry run mypy ${CODE_DIRS} ${TEST_DIRS}
@@ -58,7 +55,7 @@ docs-run: deps ## run mkdocs-based doc in the local server
 	poetry run mkdocs serve
 
 clean: ## clean virtualenv deps etc.
-	rm -rf .venv .pytest_cache .mypy_cache .coverage deps site htmlcov
+	rm -rf .venv .pytest_cache .mypy_cache .coverage deps site htmlcov .ruff_cache
 	find . -type f -name "*.pyc" | xargs rm -fr
 	find . -type d -name __pycache__ | xargs rm -fr
 

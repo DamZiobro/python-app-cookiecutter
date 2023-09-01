@@ -54,7 +54,7 @@ make clean
 ### (Optional for devs) Install pre-commit hooks
 
 Create [pre-commit](https://pre-commit.com/)-based hooks which will check the
-code syntax (using [black](https://pypi.org/project/black/), [isort](https://pypi.org/project/isort/) and [flake8](https://pypi.org/project/flake8/)) before each commit.
+code syntax (using [ruff](https://beta.ruff.rs/docs/settings/) with it's [30+ plugins](https://beta.ruff.rs/docs/rules/) before each commit.
 
 ```
 make pre-commit
@@ -66,7 +66,7 @@ make pre-commit
 
 * **[poetry](https://python-poetry.org/)-based dependency and virtual machines management**
 * **[pytest](https://docs.pytest.org/en/7.3.x/)**-based unit tests with **code coverage report** and **HTML-based test report**. Includes **doctest-based tests**.
-* **static code analysis (linting)** ([blake](https://github.com/psf/black), [isort](https://pycqa.github.io/isort/), [flake8](https://flake8.pycqa.org/en/latest/), [mypy](https://mypy.readthedocs.io/en/stable/))
+* **static code analysis (linting)** ([ruff](https://beta.ruff.rs/docs/settings/) with it's [30+ plugins](https://beta.ruff.rs/docs/rules/), [mypy](https://mypy.readthedocs.io/en/stable/))
 * **CI/CD** including linting and unit tests checks (integrated with **[GitHub Actions](https://github.com/features/actions)** according to **[Git Flow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)** rules)
 * **[Makefile](https://www.gnu.org/software/make/)** with most useful **preconfigured** development and CI/CD **commands**
 * **[mkdocs](https://www.mkdocs.org/getting-started/)**-based automatically generated **documentation** (use `make docs` or `make docs-run`)
