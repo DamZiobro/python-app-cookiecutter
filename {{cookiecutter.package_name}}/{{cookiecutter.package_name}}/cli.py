@@ -1,3 +1,5 @@
+"""Interface for command line tool."""
+
 import importlib.metadata
 
 import click
@@ -5,7 +7,7 @@ import click
 
 @click.group()
 def cli():
-    pass
+    """CLI command group."""
 
 
 @cli.command()
